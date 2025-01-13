@@ -1,0 +1,23 @@
+{% extends 'partials/base.html'%}
+{% block content %}
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">First</th>
+        <th scope="col">Last</th>
+        <th scope="col">Age</th>
+        <th scope="col">Role</th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for d in data%}
+      <tr>
+        <td>{{ d.first_name }}</td>
+        <td>{{ d.last_name }}</td>
+        <td>{{ d.age }}</td>
+        <td>{{ d.profession }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}
